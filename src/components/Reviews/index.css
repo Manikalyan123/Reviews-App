@@ -1,0 +1,43 @@
+.button-cont {
+  height: 30px;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 40px;
+}
+.button-img {
+  height: 20px;
+  width: 20px;
+}
+.user-name {
+  font-size: 23px;
+  color: white;
+}
+* {
+  font-family: 'Roboto';
+}
+.user-pic {
+  height: 18vh;
+  width: 12vw;
+}
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.description {
+  font-size: 15px;
+  color: black;
+}
+.company-name {
+  font-size: 12px;
+  color: black;
+}
