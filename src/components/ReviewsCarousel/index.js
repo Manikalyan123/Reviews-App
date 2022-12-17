@@ -7,6 +7,12 @@ import './index.css'
 class ReviewsCarousel extends Component {
   state = {id: 1}
 
+  onLeftClick = () => {
+    this.setState(prevState => {
+      id: prevState.id - 9
+    })
+  }
+
   render() {
     const {reviewsList} = this.props
     const {id} = this.state
@@ -17,7 +23,11 @@ class ReviewsCarousel extends Component {
       <div className="Cont">
         <h1 className="heading">Reviews</h1>
 
-        <ReviewList eachReview={reviewer} key={reviewer.id} />
+        <ReviewList
+          eachReview={reviewer}
+          key={reviewer.id}
+          onleftclick={this.onLeftClick}
+        />
       </div>
     )
   }

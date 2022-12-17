@@ -1,14 +1,18 @@
 import './index.css'
 
 const ReviewList = props => {
-  const {eachReview} = props
-  const {imgUrl, username, companyName, description} = eachReview
+  const {eachReview, onLeftClick} = props
+  const {imgUrl, username, companyName, description} = eachReview[0]
+
+  const onleftclick = () => {
+    onLeftClick()
+  }
 
   return (
     <div className="cont">
       <img src={imgUrl} alt={username} className="user-pic" />
       <div className="button-cont">
-        <button type="button">
+        <button type="button" onClick={onleftclick()}>
           <img
             className="button-img"
             src="https://assets.ccbp.in/frontend/react-js/left-arrow-img.png"
