@@ -12,7 +12,7 @@ const ReviewList = props => {
     <div className="cont">
       <img src={imgUrl} alt={username} className="user-pic" />
       <div className="button-cont">
-        <button type="button" onClick={onleftclick()}>
+        <button type="button" onClick={onleftclick}>
           <img
             className="button-img"
             src="https://assets.ccbp.in/frontend/react-js/left-arrow-img.png"

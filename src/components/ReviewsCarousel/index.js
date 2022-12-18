@@ -5,12 +5,12 @@ import ReviewList from '../Reviews'
 import './index.css'
 
 class ReviewsCarousel extends Component {
-  state = {id: 1}
+  state = {id: 3}
 
   onLeftClick = () => {
-    this.setState(prevState => {
-      id: prevState.id - 9
-    })
+    this.setState(prevState => ({
+      id: prevState.id - 1,
+    }))
   }
 
   render() {
