@@ -5,12 +5,32 @@ import ReviewList from '../Reviews'
 import './index.css'
 
 class ReviewsCarousel extends Component {
-  state = {id: 3}
+  state = {id: 1}
 
   onLeftClick = () => {
-    this.setState(prevState => ({
-      id: prevState.id - 1,
-    }))
+    const {id} = this.state
+    if (id === 1) {
+      this.setState(prevState => ({
+        id: prevState.id - 0,
+      }))
+    } else {
+      this.setState(prevState => ({
+        id: prevState.id - 1,
+      }))
+    }
+  }
+
+  onRightClick = () => {
+    const {id} = this.state
+    if (id === 4) {
+      this.setState(prevState => ({
+        id: prevState.id + 0,
+      }))
+    } else {
+      this.setState(prevState => ({
+        id: prevState.id + 1,
+      }))
+    }
   }
 
   render() {
@@ -26,7 +46,8 @@ class ReviewsCarousel extends Component {
         <ReviewList
           eachReview={reviewer}
           key={reviewer.id}
-          onleftclick={this.onLeftClick}
+          onLeftClick={this.onLeftClick}
+          onRightClick={this.onRightClick}
         />
       </div>
     )
